@@ -16,7 +16,7 @@ public class SecondServlet extends HttpServlet{
 		PrintWriter out = response.getWriter();
 		
 		out.print("<html><body>");
-		out.print("dispatcher를 이용한 forward 실습입니다.");
+		out.print("dispatcher를 이용한 forward 실습입니다.!!");
 		out.print("</body></html>");
 	}
 	
