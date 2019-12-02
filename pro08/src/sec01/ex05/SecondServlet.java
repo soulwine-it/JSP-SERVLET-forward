@@ -1,4 +1,4 @@
-package sec01.ex04;
+package sec01.ex05;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,13 +11,16 @@ import javax.servlet.http.HttpServletResponse;
 
 //@WebServlet("/second")
 public class SecondServlet extends HttpServlet{
-	public void doGet(HttpServletRequest requeest, HttpServletResponse response) throws IOException, ServletException {
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
+		String address = (String) request.getAttribute("address");
 		
 		out.print("<html><body>");
-		out.print("dispatcher를 이용한 forward 실습입니다.!!");
+		out.print("주소:" + address);
+		out.println("<br>");
+		out.print("redirect를 이용한 바인딩 실습.");
 		out.print("</body></html>");
 	}
-	
 }
