@@ -16,8 +16,7 @@ public class SecondServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		String name = request.getParameter("name");
 		out.print("<html><body>");
-		out.print("이름:!!!!!
-"+name);   //브라우저 출력
+		out.print("이름:!!!!!"+name);   //브라우저 출력
 		out.print("</body></html>");
 	}
 	
