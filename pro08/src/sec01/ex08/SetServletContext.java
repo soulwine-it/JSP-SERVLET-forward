@@ -20,8 +20,10 @@ public class SetServletContext extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		ServletContext context = getServletContext(); //ServletContext 객체를 가져옵니다.
 		List member = new ArrayList();
+		
 		member.add("이순신");
 		member.add(30);;
+		
 		context.setAttribute("member", member);  //ServletContext 객체에 데이터를 바인딩합니다.
 		out.print("<html><body>");
 		out.print("이순신과 30 설정");

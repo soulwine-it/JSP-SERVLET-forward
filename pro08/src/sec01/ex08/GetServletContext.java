@@ -18,6 +18,7 @@ public class GetServletContext extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
+		
 		ServletContext context = getServletContext(); // 서블릭 객체를 가져오기
 		List member = (ArrayList) context.getAttribute("member");
 		String name = (String)member.get(0);
