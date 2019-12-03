@@ -1,4 +1,4 @@
-package src01.ex10;
+package sec01.ex10;
 
 import java.io.BufferedReader;
 import java.io.IOException;
